@@ -37,11 +37,12 @@
                 <p class="event received">Device is Ready</p>
             </div>
         </div>
-        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
-            var ref = window.open('http://m.rococophoto.net', '_blank', 'location=yes');
+            var ref = window.open('http://m.rococophoto.net', '_system', 'location=yes');
+            alert("웹뷰실행");
         </script>
     </body>
 </html>
