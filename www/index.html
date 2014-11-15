@@ -37,10 +37,22 @@
                 <p class="event received">Device is Ready</p>
             </div>
         </div>
+		 <script type="text/javascript" src="notification.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
+			navigator.notification.alert(
+    'You are the winner!',  // message
+    alertDismissed,         // callback
+    'Game Over',            // title
+    'Done'                  // buttonName
+);
+
+function alertDismissed() {
+    // do something
+}
+
             var ref = window.open('http://m.rococophoto.net', '_system', 'location=yes');
             ref.addEventListener('loadstart', function(event) { alert(event.url); });
             alert("웹뷰실행");
